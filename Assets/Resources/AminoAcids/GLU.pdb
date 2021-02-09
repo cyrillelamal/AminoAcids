@@ -1,0 +1,75 @@
+HEADER    GLU
+REMARK   1 
+REMARK   1   -ISIS-            3D
+REMARK   1 
+REMARK   1  19 18  0  0  0  0  0  0  0  0  0
+REMARK   2 
+REMARK   2 BOND   1  2  1  0  0  0	1.469
+REMARK   2 BOND   1 11  1  0  0  0	1.009
+REMARK   2 BOND   1 12  1  0  0  0	1.009
+REMARK   2 BOND   2  3  1  0  0  0	1.508
+REMARK   2 BOND   2  5  1  0  0  0	1.53
+REMARK   2 BOND   2 13  1  0  0  0	1.09
+REMARK   2 BOND   3  4  2  0  0  0	1.208
+REMARK   2 BOND   3 10  1  0  0  0	1.342
+REMARK   2 BOND   5  6  1  0  0  0	1.531
+REMARK   2 BOND   5 14  1  0  0  0	1.09
+REMARK   2 BOND   5 15  1  0  0  0	1.089
+REMARK   2 BOND   6  7  1  0  0  0	1.508
+REMARK   2 BOND   6 16  1  0  0  0	1.09
+REMARK   2 BOND   6 17  1  0  0  0	1.089
+REMARK   2 BOND   7  8  2  0  0  0	1.208
+REMARK   2 BOND   7  9  1  0  0  0	1.343
+REMARK   2 BOND   9 18  1  0  0  0	0.9663
+REMARK   2 BOND  10 19  1  0  0  0	0.9671
+REMARK   3 
+REMARK   3 ANGLE  111.05    1    2   11
+REMARK   3 ANGLE  110.98    1   11   12
+REMARK   3 ANGLE  110.99    1   12    2
+REMARK   3 ANGLE  109.47    2    1    3
+REMARK   3 ANGLE  109.43    2    3    5
+REMARK   3 ANGLE  109.48    2    5    1
+REMARK   3 ANGLE   109.5    2    1   13
+REMARK   3 ANGLE  109.46    2    3   13
+REMARK   3 ANGLE  109.49    2    5   13
+REMARK   3 ANGLE  119.98    3    2    4
+REMARK   3 ANGLE  120.03    3    4   10
+REMARK   3 ANGLE  119.99    3   10    2
+REMARK   3 ANGLE   109.4    5    2    6
+REMARK   3 ANGLE  109.46    5    6   14
+REMARK   3 ANGLE  109.51    5   14    2
+REMARK   3 ANGLE   109.5    5    2   15
+REMARK   3 ANGLE  109.47    5    6   15
+REMARK   3 ANGLE  109.48    5   14   15
+REMARK   3 ANGLE  109.43    6    5    7
+REMARK   3 ANGLE  109.45    6    7   16
+REMARK   3 ANGLE   109.5    6   16    5
+REMARK   3 ANGLE  109.45    6    5   17
+REMARK   3 ANGLE  109.47    6    7   17
+REMARK   3 ANGLE  109.53    6   16   17
+REMARK   3 ANGLE     120    7    6    8
+REMARK   3 ANGLE     120    7    8    9
+REMARK   3 ANGLE     120    7    9    6
+REMARK   3 ANGLE  116.99    9    7   18
+REMARK   3 ANGLE  116.99   10    3   19
+ATOM      1 N    GLU A   1       1.199   1.867  -0.117  1.00  0.00           N
+ATOM      2 CA   GLU A   1       1.138   0.515   0.453  1.00  0.00           C
+ATOM      3 C    GLU A   1       2.364   -0.26   0.041  1.00  0.00           C
+ATOM      4 O    GLU A   1        3.01   0.096  -0.916  1.00  0.00           O
+ATOM      5 CB   GLU A   1      -0.113    -0.2  -0.062  1.00  0.00           C
+ATOM      6 CG   GLU A   1       -1.36   0.517   0.461  1.00  0.00           C
+ATOM      7 CD   GLU A   1      -2.593  -0.187  -0.046  1.00  0.00           C
+ATOM      8 OE1  GLU A   1      -2.485  -1.161  -0.753  1.00  0.00           O
+ATOM      9 OE2  GLU A   1      -3.811   0.269   0.287  1.00  0.00           O
+ATOM     10 OXT  GLU A   1       2.737  -1.345   0.737  1.00  0.00           O
+ATOM     11 H    GLU A   1       1.237   1.834  -1.125  1.00  0.00           H
+ATOM     12 H2   GLU A   1       0.421   2.427   0.197  1.00  0.00           H
+ATOM     13 HA   GLU A   1       1.098    0.58    1.54  1.00  0.00           H
+ATOM     14 HB2  GLU A   1      -0.117  -0.187  -1.152  1.00  0.00           H
+ATOM     15 HB3  GLU A   1      -0.113  -1.231   0.289  1.00  0.00           H
+ATOM     16 HG2  GLU A   1      -1.357   0.504   1.551  1.00  0.00           H
+ATOM     17 HG3  GLU A   1       -1.36   1.548   0.109  1.00  0.00           H
+ATOM     18 HE2  GLU A   1      -4.571  -0.215  -0.062  1.00  0.00           H
+ATOM     19 HXT  GLU A   1        3.53  -1.809   0.435  1.00  0.00           H
+TER      20      GLU A   1
+END

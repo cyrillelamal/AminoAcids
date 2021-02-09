@@ -1,0 +1,95 @@
+HEADER    TYR
+REMARK   1 
+REMARK   1   -ISIS-            3D
+REMARK   1 
+REMARK   1  24 24  0  0  0  0  0  0  0  0  0
+REMARK   2 
+REMARK   2 BOND   1  2  1  0  0  0	1.469
+REMARK   2 BOND   1 14  1  0  0  0	1.009
+REMARK   2 BOND   1 15  1  0  0  0	1.009
+REMARK   2 BOND   2  3  1  0  0  0	1.507
+REMARK   2 BOND   2  5  1  0  0  0	1.529
+REMARK   2 BOND   2 16  1  0  0  0	1.091
+REMARK   2 BOND   3  4  2  0  0  0	1.207
+REMARK   2 BOND   3 13  1  0  0  0	1.342
+REMARK   2 BOND   5  6  1  0  0  0	1.506
+REMARK   2 BOND   5 17  1  0  0  0	1.089
+REMARK   2 BOND   5 18  1  0  0  0	1.091
+REMARK   2 BOND   6  7  2  0  0  0	1.382
+REMARK   2 BOND   6  8  1  0  0  0	1.383
+REMARK   2 BOND   7  9  1  0  0  0	1.381
+REMARK   2 BOND   7 19  1  0  0  0	1.079
+REMARK   2 BOND   8 10  2  0  0  0	1.381
+REMARK   2 BOND   8 20  1  0  0  0	1.08
+REMARK   2 BOND   9 11  2  0  0  0	1.387
+REMARK   2 BOND   9 21  1  0  0  0	1.08
+REMARK   2 BOND  10 11  1  0  0  0	1.388
+REMARK   2 BOND  10 22  1  0  0  0	1.08
+REMARK   2 BOND  11 12  1  0  0  0	1.358
+REMARK   2 BOND  12 23  1  0  0  0	0.9664
+REMARK   2 BOND  13 24  1  0  0  0	0.9675
+REMARK   3 
+REMARK   3 ANGLE  106.67    1    2   14
+REMARK   3 ANGLE   106.7    1   14   15
+REMARK   3 ANGLE  106.66    1   15    2
+REMARK   3 ANGLE  109.47    2    1    3
+REMARK   3 ANGLE  109.51    2    3    5
+REMARK   3 ANGLE  109.47    2    5    1
+REMARK   3 ANGLE  109.43    2    1   16
+REMARK   3 ANGLE  109.49    2    3   16
+REMARK   3 ANGLE  109.47    2    5   16
+REMARK   3 ANGLE  120.01    3    2    4
+REMARK   3 ANGLE  120.04    3    4   13
+REMARK   3 ANGLE  119.95    3   13    2
+REMARK   3 ANGLE   109.5    5    2    6
+REMARK   3 ANGLE  109.52    5    6   17
+REMARK   3 ANGLE  109.51    5   17    2
+REMARK   3 ANGLE  109.46    5    2   18
+REMARK   3 ANGLE  109.45    5    6   18
+REMARK   3 ANGLE  109.38    5   17   18
+REMARK   3 ANGLE  119.95    6    5    7
+REMARK   3 ANGLE  120.11    6    7    8
+REMARK   3 ANGLE  119.94    6    8    5
+REMARK   3 ANGLE  120.07    7    6    9
+REMARK   3 ANGLE  119.99    7    9   19
+REMARK   3 ANGLE  119.94    7   19    6
+REMARK   3 ANGLE  120.02    8    6   10
+REMARK   3 ANGLE  119.98    8   10   20
+REMARK   3 ANGLE     120    8   20    6
+REMARK   3 ANGLE  119.98    9    7   11
+REMARK   3 ANGLE  119.96    9   11   21
+REMARK   3 ANGLE  120.06    9   21    7
+REMARK   3 ANGLE  119.98   10    8   11
+REMARK   3 ANGLE  119.97   10   11   22
+REMARK   3 ANGLE  120.04   10   22    8
+REMARK   3 ANGLE  119.83   11    9   10
+REMARK   3 ANGLE  120.04   11   10   12
+REMARK   3 ANGLE  120.13   11   12    9
+REMARK   3 ANGLE  106.88   12   11   23
+REMARK   3 ANGLE  119.93   13    3   24
+ATOM      1 N    TYR A   1        1.32   0.952   1.428  1.00  0.00           N
+ATOM      2 CA   TYR A   1      -0.018   0.429   1.734  1.00  0.00           C
+ATOM      3 C    TYR A   1      -0.103   0.094   3.201  1.00  0.00           C
+ATOM      4 O    TYR A   1       0.886  -0.254   3.799  1.00  0.00           O
+ATOM      5 CB   TYR A   1      -0.274  -0.831   0.907  1.00  0.00           C
+ATOM      6 CG   TYR A   1      -0.189  -0.496  -0.559  1.00  0.00           C
+ATOM      7 CD1  TYR A   1       1.022  -0.589  -1.219  1.00  0.00           C
+ATOM      8 CD2  TYR A   1      -1.324  -0.102  -1.244  1.00  0.00           C
+ATOM      9 CE1  TYR A   1       1.103  -0.282  -2.563  1.00  0.00           C
+ATOM     10 CE2  TYR A   1      -1.247    0.21  -2.587  1.00  0.00           C
+ATOM     11 CZ   TYR A   1      -0.032   0.118  -3.252  1.00  0.00           C
+ATOM     12 OH   TYR A   1       0.044    0.42  -4.574  1.00  0.00           O
+ATOM     13 OXT  TYR A   1      -1.279   0.184   3.842  1.00  0.00           O
+ATOM     14 H    TYR A   1       1.977   0.225   1.669  1.00  0.00           H
+ATOM     15 H2   TYR A   1       1.365   1.063   0.426  1.00  0.00           H
+ATOM     16 HA   TYR A   1      -0.767   1.183   1.489  1.00  0.00           H
+ATOM     17 HB2  TYR A   1       0.473  -1.585   1.152  1.00  0.00           H
+ATOM     18 HB3  TYR A   1      -1.268  -1.219   1.134  1.00  0.00           H
+ATOM     19 HD1  TYR A   1       1.905  -0.902  -0.683  1.00  0.00           H
+ATOM     20 HD2  TYR A   1      -2.269  -0.031  -0.727  1.00  0.00           H
+ATOM     21 HE1  TYR A   1       2.049  -0.354  -3.078  1.00  0.00           H
+ATOM     22 HE2  TYR A   1      -2.132   0.523  -3.121  1.00  0.00           H
+ATOM     23 HH   TYR A   1      -0.123  -0.399  -5.059  1.00  0.00           H
+ATOM     24 HXT  TYR A   1      -1.333   -0.03   4.784  1.00  0.00           H
+TER      25      TYR A   1
+END

@@ -1,0 +1,89 @@
+HEADER    LEU
+REMARK   1 
+REMARK   1   -ISIS-            3D
+REMARK   1 
+REMARK   1  22 21  0  0  0  0  0  0  0  0  0
+REMARK   2 
+REMARK   2 BOND   1  2  1  0  0  0	1.469
+REMARK   2 BOND   1 10  1  0  0  0	1.008
+REMARK   2 BOND   1 11  1  0  0  0	1.008
+REMARK   2 BOND   2  3  1  0  0  0	1.506
+REMARK   2 BOND   2  5  1  0  0  0	1.529
+REMARK   2 BOND   2 12  1  0  0  0	1.089
+REMARK   2 BOND   3  4  2  0  0  0	1.208
+REMARK   2 BOND   3  9  1  0  0  0	1.343
+REMARK   2 BOND   5  6  1  0  0  0	1.53
+REMARK   2 BOND   5 13  1  0  0  0	1.09
+REMARK   2 BOND   5 14  1  0  0  0	1.09
+REMARK   2 BOND   6  7  1  0  0  0	1.53
+REMARK   2 BOND   6  8  1  0  0  0	1.529
+REMARK   2 BOND   6 15  1  0  0  0	1.09
+REMARK   2 BOND   7 16  1  0  0  0	1.089
+REMARK   2 BOND   7 17  1  0  0  0	1.09
+REMARK   2 BOND   7 18  1  0  0  0	1.09
+REMARK   2 BOND   8 19  1  0  0  0	1.09
+REMARK   2 BOND   8 20  1  0  0  0	1.09
+REMARK   2 BOND   8 21  1  0  0  0	1.09
+REMARK   2 BOND   9 22  1  0  0  0	0.9662
+REMARK   3 
+REMARK   3 ANGLE  106.77    1    2   10
+REMARK   3 ANGLE  106.74    1   10   11
+REMARK   3 ANGLE  106.71    1   11    2
+REMARK   3 ANGLE  109.44    2    1    3
+REMARK   3 ANGLE  109.49    2    3    5
+REMARK   3 ANGLE  109.42    2    5    1
+REMARK   3 ANGLE  109.47    2    1   12
+REMARK   3 ANGLE  109.53    2    3   12
+REMARK   3 ANGLE  109.48    2    5   12
+REMARK   3 ANGLE  120.09    3    2    4
+REMARK   3 ANGLE  119.93    3    4    9
+REMARK   3 ANGLE  119.98    3    9    2
+REMARK   3 ANGLE  109.49    5    2    6
+REMARK   3 ANGLE  109.44    5    6   13
+REMARK   3 ANGLE  109.46    5   13    2
+REMARK   3 ANGLE  109.54    5    2   14
+REMARK   3 ANGLE  109.49    5    6   14
+REMARK   3 ANGLE   109.4    5   13   14
+REMARK   3 ANGLE   109.5    6    5    7
+REMARK   3 ANGLE  109.52    6    7    8
+REMARK   3 ANGLE   109.5    6    8    5
+REMARK   3 ANGLE   109.4    6    5   15
+REMARK   3 ANGLE  109.38    6    7   15
+REMARK   3 ANGLE  109.53    6    8   15
+REMARK   3 ANGLE  109.49    7    6   16
+REMARK   3 ANGLE  109.56    7   16   17
+REMARK   3 ANGLE  109.51    7   17    6
+REMARK   3 ANGLE  109.45    7    6   18
+REMARK   3 ANGLE  109.42    7   16   18
+REMARK   3 ANGLE   109.4    7   17   18
+REMARK   3 ANGLE  109.43    8    6   19
+REMARK   3 ANGLE  109.48    8   19   20
+REMARK   3 ANGLE   109.5    8   20    6
+REMARK   3 ANGLE  109.48    8    6   21
+REMARK   3 ANGLE  109.46    8   19   21
+REMARK   3 ANGLE  109.48    8   20   21
+REMARK   3 ANGLE  120.04    9    3   22
+ATOM      1 N    LEU A   1      -1.661   0.627  -0.406  1.00  0.00           N
+ATOM      2 CA   LEU A   1      -0.205   0.441  -0.467  1.00  0.00           C
+ATOM      3 C    LEU A   1        0.18  -0.055  -1.836  1.00  0.00           C
+ATOM      4 O    LEU A   1      -0.591  -0.731  -2.474  1.00  0.00           O
+ATOM      5 CB   LEU A   1       0.221  -0.583   0.585  1.00  0.00           C
+ATOM      6 CG   LEU A   1       -0.17  -0.079   1.976  1.00  0.00           C
+ATOM      7 CD1  LEU A   1       0.256  -1.104   3.029  1.00  0.00           C
+ATOM      8 CD2  LEU A   1       0.526   1.254    2.25  1.00  0.00           C
+ATOM      9 OXT  LEU A   1       1.382   0.254  -2.348  1.00  0.00           O
+ATOM     10 H    LEU A   1      -2.077  -0.272  -0.592  1.00  0.00           H
+ATOM     11 H2   LEU A   1      -1.884   0.858    0.55  1.00  0.00           H
+ATOM     12 HA   LEU A   1       0.291   1.391  -0.271  1.00  0.00           H
+ATOM     13 HB2  LEU A   1       1.301  -0.722    0.54  1.00  0.00           H
+ATOM     14 HB3  LEU A   1      -0.275  -1.534    0.39  1.00  0.00           H
+ATOM     15 HG   LEU A   1       -1.25   0.058   2.021  1.00  0.00           H
+ATOM     16 HD11 LEU A   1      -0.022  -0.745   4.019  1.00  0.00           H
+ATOM     17 HD12 LEU A   1       -0.24  -2.055   2.833  1.00  0.00           H
+ATOM     18 HD13 LEU A   1       1.336  -1.243   2.984  1.00  0.00           H
+ATOM     19 HD21 LEU A   1       1.606   1.115   2.205  1.00  0.00           H
+ATOM     20 HD22 LEU A   1       0.222   1.984     1.5  1.00  0.00           H
+ATOM     21 HD23 LEU A   1       0.247   1.613   3.241  1.00  0.00           H
+ATOM     22 HXT  LEU A   1        1.63  -0.064  -3.226  1.00  0.00           H
+TER      23      LEU A   1
+END

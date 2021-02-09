@@ -1,0 +1,110 @@
+HEADER    TRP
+REMARK   1 
+REMARK   1   -ISIS-            3D
+REMARK   1 
+REMARK   1  27 28  0  0  0  0  0  0  0  0  0
+REMARK   2 
+REMARK   2 BOND   1  2  1  0  0  0	1.469
+REMARK   2 BOND   1 16  1  0  0  0	1.009
+REMARK   2 BOND   1 17  1  0  0  0	1.01
+REMARK   2 BOND   2  3  1  0  0  0	1.507
+REMARK   2 BOND   2  5  1  0  0  0	1.529
+REMARK   2 BOND   2 18  1  0  0  0	1.09
+REMARK   2 BOND   3  4  2  0  0  0	1.208
+REMARK   2 BOND   3 15  1  0  0  0	1.342
+REMARK   2 BOND   5  6  1  0  0  0	1.507
+REMARK   2 BOND   5 19  1  0  0  0	1.09
+REMARK   2 BOND   5 20  1  0  0  0	1.089
+REMARK   2 BOND   6  7  2  0  0  0	1.343
+REMARK   2 BOND   6  8  1  0  0  0	1.464
+REMARK   2 BOND   7  9  1  0  0  0	1.369
+REMARK   2 BOND   7 21  1  0  0  0	1.079
+REMARK   2 BOND   8 10  2  0  0  0	1.407
+REMARK   2 BOND   8 11  1  0  0  0	1.396
+REMARK   2 BOND   9 10  1  0  0  0	1.377
+REMARK   2 BOND   9 22  1  0  0  0	0.9691
+REMARK   2 BOND  10 12  1  0  0  0	1.391
+REMARK   2 BOND  11 13  2  0  0  0	1.366
+REMARK   2 BOND  11 23  1  0  0  0	1.08
+REMARK   2 BOND  12 14  2  0  0  0	1.377
+REMARK   2 BOND  12 24  1  0  0  0	1.08
+REMARK   2 BOND  13 14  1  0  0  0	1.388
+REMARK   2 BOND  13 25  1  0  0  0	1.08
+REMARK   2 BOND  14 26  1  0  0  0	1.08
+REMARK   2 BOND  15 27  1  0  0  0	0.967
+REMARK   3 
+REMARK   3 ANGLE  106.69    1    2   16
+REMARK   3 ANGLE  106.71    1   16   17
+REMARK   3 ANGLE  106.68    1   17    2
+REMARK   3 ANGLE  109.43    2    1    3
+REMARK   3 ANGLE  109.49    2    3    5
+REMARK   3 ANGLE  109.52    2    5    1
+REMARK   3 ANGLE  109.48    2    1   18
+REMARK   3 ANGLE  109.44    2    3   18
+REMARK   3 ANGLE  109.47    2    5   18
+REMARK   3 ANGLE     120    3    2    4
+REMARK   3 ANGLE  120.03    3    4   15
+REMARK   3 ANGLE  119.97    3   15    2
+REMARK   3 ANGLE  109.44    5    2    6
+REMARK   3 ANGLE  109.45    5    6   19
+REMARK   3 ANGLE  109.47    5   19    2
+REMARK   3 ANGLE  109.51    5    2   20
+REMARK   3 ANGLE  109.46    5    6   20
+REMARK   3 ANGLE  109.49    5   19   20
+REMARK   3 ANGLE   126.5    6    5    7
+REMARK   3 ANGLE  106.99    6    7    8
+REMARK   3 ANGLE  126.51    6    8    5
+REMARK   3 ANGLE  109.93    7    6    9
+REMARK   3 ANGLE  124.98    7    9   21
+REMARK   3 ANGLE  125.09    7   21    6
+REMARK   3 ANGLE  106.08    8    6   10
+REMARK   3 ANGLE  119.87    8   10   11
+REMARK   3 ANGLE  134.05    8   11    6
+REMARK   3 ANGLE  109.85    9    7   10
+REMARK   3 ANGLE  125.08    9   10   22
+REMARK   3 ANGLE  125.07    9   22    7
+REMARK   3 ANGLE  107.15   10    8    9
+REMARK   3 ANGLE  133.51   10    9   12
+REMARK   3 ANGLE  119.35   10   12    8
+REMARK   3 ANGLE   119.8   11    8   13
+REMARK   3 ANGLE  120.13   11   13   23
+REMARK   3 ANGLE  120.07   11   23    8
+REMARK   3 ANGLE  119.81   12   10   14
+REMARK   3 ANGLE  120.08   12   14   24
+REMARK   3 ANGLE  120.11   12   24   10
+REMARK   3 ANGLE  120.54   13   11   14
+REMARK   3 ANGLE   119.7   13   14   25
+REMARK   3 ANGLE  119.76   13   25   11
+REMARK   3 ANGLE  120.64   14   12   13
+REMARK   3 ANGLE  119.72   14   13   26
+REMARK   3 ANGLE  119.64   14   26   12
+REMARK   3 ANGLE  119.96   15    3   27
+ATOM      1 N    TRP A   1       1.278   1.121   2.059  1.00  0.00           N
+ATOM      2 CA   TRP A   1      -0.008   0.417    1.97  1.00  0.00           C
+ATOM      3 C    TRP A   1       -0.49   0.076   3.357  1.00  0.00           C
+ATOM      4 O    TRP A   1       0.308   -0.13    4.24  1.00  0.00           O
+ATOM      5 CB   TRP A   1       0.168  -0.868   1.161  1.00  0.00           C
+ATOM      6 CG   TRP A   1        0.65  -0.526  -0.225  1.00  0.00           C
+ATOM      7 CD1  TRP A   1       1.928  -0.418  -0.622  1.00  0.00           C
+ATOM      8 CD2  TRP A   1      -0.186  -0.256  -1.396  1.00  0.00           C
+ATOM      9 NE1  TRP A   1       1.978  -0.095  -1.951  1.00  0.00           N
+ATOM     10 CE2  TRP A   1       0.701   0.014  -2.454  1.00  0.00           C
+ATOM     11 CE3  TRP A   1      -1.564   -0.21  -1.615  1.00  0.00           C
+ATOM     12 CZ2  TRP A   1        0.19   0.314  -3.712  1.00  0.00           C
+ATOM     13 CZ3  TRP A   1      -2.044   0.086  -2.859  1.00  0.00           C
+ATOM     14 CH2  TRP A   1      -1.173   0.348  -3.907  1.00  0.00           C
+ATOM     15 OXT  TRP A   1      -1.806   0.001    3.61  1.00  0.00           O
+ATOM     16 H    TRP A   1       1.921   0.493   2.518  1.00  0.00           H
+ATOM     17 H2   TRP A   1       1.611   1.237   1.113  1.00  0.00           H
+ATOM     18 HA   TRP A   1       -0.74   1.058   1.479  1.00  0.00           H
+ATOM     19 HB2  TRP A   1         0.9  -1.509   1.652  1.00  0.00           H
+ATOM     20 HB3  TRP A   1      -0.786   -1.39   1.095  1.00  0.00           H
+ATOM     21 HD1  TRP A   1       2.789  -0.564   0.012  1.00  0.00           H
+ATOM     22 HE1  TRP A   1       2.791   0.036  -2.462  1.00  0.00           H
+ATOM     23 HE3  TRP A   1      -2.248  -0.413  -0.804  1.00  0.00           H
+ATOM     24 HZ2  TRP A   1        0.86   0.521  -4.534  1.00  0.00           H
+ATOM     25 HZ3  TRP A   1       -3.11   0.116  -3.029  1.00  0.00           H
+ATOM     26 HH2  TRP A   1      -1.567   0.582  -4.885  1.00  0.00           H
+ATOM     27 HXT  TRP A   1      -2.115  -0.217     4.5  1.00  0.00           H
+TER      28      TRP A   1
+END

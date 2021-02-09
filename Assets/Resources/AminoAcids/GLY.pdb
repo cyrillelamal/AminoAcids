@@ -1,0 +1,41 @@
+HEADER    GLY
+REMARK   1 
+REMARK   1   -ISIS-            3D
+REMARK   1 
+REMARK   1  10  9  0  0  0  0  0  0  0  0  0
+REMARK   2 
+REMARK   2 BOND   1  2  1  0  0  0	1.47
+REMARK   2 BOND   1  6  1  0  0  0	1.008
+REMARK   2 BOND   1  7  1  0  0  0	1.009
+REMARK   2 BOND   2  3  1  0  0  0	1.507
+REMARK   2 BOND   2  8  1  0  0  0	1.09
+REMARK   2 BOND   2  9  1  0  0  0	1.09
+REMARK   2 BOND   3  4  2  0  0  0	1.208
+REMARK   2 BOND   3  5  1  0  0  0	1.342
+REMARK   2 BOND   5 10  1  0  0  0	0.9673
+REMARK   3 
+REMARK   3 ANGLE  111.02    1    2    6
+REMARK   3 ANGLE  111.04    1    6    7
+REMARK   3 ANGLE  110.94    1    7    2
+REMARK   3 ANGLE  109.44    2    1    3
+REMARK   3 ANGLE  109.47    2    3    8
+REMARK   3 ANGLE  109.48    2    8    1
+REMARK   3 ANGLE  109.45    2    1    9
+REMARK   3 ANGLE  109.47    2    3    9
+REMARK   3 ANGLE  109.51    2    8    9
+REMARK   3 ANGLE  120.05    3    2    4
+REMARK   3 ANGLE  119.98    3    4    5
+REMARK   3 ANGLE  119.97    3    5    2
+REMARK   3 ANGLE  117.04    5    3   10
+ATOM      1 N    GLY A   1       1.931    0.09  -0.034  1.00  0.00           N
+ATOM      2 CA   GLY A   1       0.761  -0.799  -0.008  1.00  0.00           C
+ATOM      3 C    GLY A   1      -0.498   0.029  -0.005  1.00  0.00           C
+ATOM      4 O    GLY A   1      -0.429   1.235  -0.023  1.00  0.00           O
+ATOM      5 OXT  GLY A   1      -1.697  -0.574   0.018  1.00  0.00           O
+ATOM      6 H    GLY A   1        1.91   0.738   0.738  1.00  0.00           H
+ATOM      7 H2   GLY A   1       2.788  -0.442  -0.037  1.00  0.00           H
+ATOM      8 HA2  GLY A   1       0.772   -1.44  -0.889  1.00  0.00           H
+ATOM      9 HA3  GLY A   1       0.793  -1.415   0.891  1.00  0.00           H
+ATOM     10 HXT  GLY A   1      -2.477  -0.002   0.019  1.00  0.00           H
+TER      11      GLY A   1
+END

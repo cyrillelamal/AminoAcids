@@ -1,0 +1,68 @@
+HEADER    THR
+REMARK   1 
+REMARK   1   -ISIS-            3D
+REMARK   1 
+REMARK   1  17 16  0  0  0  0  0  0  0  0  0
+REMARK   2 
+REMARK   2 BOND   1  2  1  0  0  0	1.469
+REMARK   2 BOND   1  9  1  0  0  0	1.007
+REMARK   2 BOND   1 10  1  0  0  0	1.009
+REMARK   2 BOND   2  3  1  0  0  0	1.506
+REMARK   2 BOND   2  5  1  0  0  0	1.529
+REMARK   2 BOND   2 11  1  0  0  0	1.09
+REMARK   2 BOND   3  4  2  0  0  0	1.207
+REMARK   2 BOND   3  8  1  0  0  0	1.342
+REMARK   2 BOND   5  6  1  0  0  0	1.428
+REMARK   2 BOND   5  7  1  0  0  0	1.53
+REMARK   2 BOND   5 12  1  0  0  0	1.09
+REMARK   2 BOND   6 13  1  0  0  0	0.9666
+REMARK   2 BOND   7 14  1  0  0  0	1.089
+REMARK   2 BOND   7 15  1  0  0  0	1.09
+REMARK   2 BOND   7 16  1  0  0  0	1.089
+REMARK   2 BOND   8 17  1  0  0  0	0.967
+REMARK   3 
+REMARK   3 ANGLE  106.72    1    2    9
+REMARK   3 ANGLE  106.71    1    9   10
+REMARK   3 ANGLE  106.73    1   10    2
+REMARK   3 ANGLE  109.41    2    1    3
+REMARK   3 ANGLE  109.53    2    3    5
+REMARK   3 ANGLE  109.41    2    5    1
+REMARK   3 ANGLE  109.42    2    1   11
+REMARK   3 ANGLE  109.53    2    3   11
+REMARK   3 ANGLE  109.53    2    5   11
+REMARK   3 ANGLE  120.09    3    2    4
+REMARK   3 ANGLE  119.99    3    4    8
+REMARK   3 ANGLE  119.92    3    8    2
+REMARK   3 ANGLE  109.51    5    2    6
+REMARK   3 ANGLE  109.45    5    6    7
+REMARK   3 ANGLE  109.53    5    7    2
+REMARK   3 ANGLE  109.43    5    2   12
+REMARK   3 ANGLE  109.47    5    6   12
+REMARK   3 ANGLE  109.45    5    7   12
+REMARK   3 ANGLE  106.81    6    5   13
+REMARK   3 ANGLE  109.48    7    5   14
+REMARK   3 ANGLE  109.46    7   14   15
+REMARK   3 ANGLE  109.47    7   15    5
+REMARK   3 ANGLE  109.46    7    5   16
+REMARK   3 ANGLE  109.49    7   14   16
+REMARK   3 ANGLE  109.47    7   15   16
+REMARK   3 ANGLE  119.96    8    3   17
+ATOM      1 N    THR A   1       1.543  -0.702    0.43  1.00  0.00           N
+ATOM      2 CA   THR A   1       0.122  -0.706   0.056  1.00  0.00           C
+ATOM      3 C    THR A   1      -0.038   -0.09  -1.309  1.00  0.00           C
+ATOM      4 O    THR A   1       0.732   0.761  -1.683  1.00  0.00           O
+ATOM      5 CB   THR A   1      -0.675   0.104   1.079  1.00  0.00           C
+ATOM      6 OG1  THR A   1      -0.193   1.448   1.103  1.00  0.00           O
+ATOM      7 OG2  THR A   1      -0.511  -0.521   2.466  1.00  0.00           C
+ATOM      8 OXT  THR A   1      -1.039  -0.488   -2.11  1.00  0.00           O
+ATOM      9 H    THR A   1       1.839   0.261   0.434  1.00  0.00           H
+ATOM     10 H2   THR A   1       1.593  -1.025   1.385  1.00  0.00           H
+ATOM     11 HA   THR A   1      -0.245  -1.732   0.038  1.00  0.00           H
+ATOM     12 HB   THR A   1      -1.729   0.101   0.802  1.00  0.00           H
+ATOM     13 HG1  THR A   1        0.74   1.406   1.352  1.00  0.00           H
+ATOM     14 HG21 THR A   1       -1.08   0.056   3.194  1.00  0.00           H
+ATOM     15 HG22 THR A   1      -0.879  -1.547   2.448  1.00  0.00           H
+ATOM     16 HG23 THR A   1       0.542  -0.518   2.743  1.00  0.00           H
+ATOM     17 HXT  THR A   1      -1.143  -0.092  -2.986  1.00  0.00           H
+TER      18      THR A   1
+END
