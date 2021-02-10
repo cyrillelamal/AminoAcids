@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class CMoleculeRepresentation
 {
+    // The initial position of the molecule is little strange.
+    // To see the molecule well, we have to move it a little.
+    private const float YBias = 50F;
+    private const float ZBias = -100F;
+
     private readonly string _file;
 
     private CMolecula _molecule;
@@ -119,7 +124,7 @@ public class CMoleculeRepresentation
         var handler = GetMolecule().Handle;
         var wp = Camera.main.WorldToScreenPoint(handler.transform.position);
 
-        handler.transform.position = new Vector3(wp.x, wp.y, wp.z);
+        handler.transform.position = new Vector3(wp.x, wp.y + YBias, +ZBias);
     }
 
     private string GetFile() => _file;
