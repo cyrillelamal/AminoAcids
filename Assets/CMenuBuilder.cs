@@ -33,7 +33,6 @@ public class CMenuBuilder : MonoBehaviour
     private void Start()
     {
         var files = EnumerateFiles();
-        SetFiles(files);
 
         var rects = new Rect[files.Length];
 
@@ -44,6 +43,7 @@ public class CMenuBuilder : MonoBehaviour
         }
 
         SetRects(rects);
+        SetFiles(files);
     }
 
     private void OnGUI()
@@ -58,33 +58,51 @@ public class CMenuBuilder : MonoBehaviour
             {
                 GetHandler()?.Destroy();
 
-                var handler = new CMoleculeRepresentation(file);
+                var handler = CMoleculeRepresentation.ParseFromFile(file);
+
+                handler.Display(Scale);
 
                 SetHandler(handler);
-                GetHandler().Display(Scale);
             }
         }
     }
 
     private void Update()
     {
-        if (GetHandler() is null) return; // The user has not yet chosen a molecule.
+        var handler = GetHandler();
+        if (handler is null) return; // The user has not yet chosen a molecule.
 
         // Scale
-        if (Input.mouseScrollDelta.y != 0) GetHandler().ScaleWithWheel(Input.mouseScrollDelta.y);
+        if (Input.mouseScrollDelta.y != 0) handler.ScaleWithWheel(Input.mouseScrollDelta.y);
 
         // Rotations
         var cp = Input.mousePosition;
         var pp = GetPreviousMousePosition();
-        if (Input.GetMouseButton(0)) GetHandler().RotateWithMouse(cp, pp, Velocity);
+        if (Input.GetMouseButton(0)) handler.RotateWithMouse(cp, pp, Velocity);
 
         // Movements
-        if (Input.GetKey(KeyCode.UpArrow)) GetHandler().MoveWithArrows(KeyCode.UpArrow, Velocity);
-        if (Input.GetKey(KeyCode.RightArrow)) GetHandler().MoveWithArrows(KeyCode.RightArrow, Velocity);
-        if (Input.GetKey(KeyCode.DownArrow)) GetHandler().MoveWithArrows(KeyCode.DownArrow, Velocity);
-        if (Input.GetKey(KeyCode.LeftArrow)) GetHandler().MoveWithArrows(KeyCode.LeftArrow, Velocity);
+        if (Input.GetKey(KeyCode.UpArrow)) handler.MoveWithArrows(KeyCode.UpArrow, Velocity);
+        if (Input.GetKey(KeyCode.RightArrow)) handler.MoveWithArrows(KeyCode.RightArrow, Velocity);
+        if (Input.GetKey(KeyCode.DownArrow)) handler.MoveWithArrows(KeyCode.DownArrow, Velocity);
+        if (Input.GetKey(KeyCode.LeftArrow)) handler.MoveWithArrows(KeyCode.LeftArrow, Velocity);
 
         SetPreviousMousePosition(cp); // Unconditional
+    }
+
+    /// <summary>
+    /// Enumerate all corresponding files in the watched directory.
+    /// </summary>
+    /// <returns>
+    /// The list of fully-qualified paths.
+    /// </returns>
+    private static string[] EnumerateFiles()
+    {
+        var ext = Ext.StartsWith(".") ? Ext : $".{Ext}";
+        var glob = $"*{ext}";
+
+        return Directory
+            .EnumerateFiles(Path.Combine(Directory.GetCurrentDirectory(), Dir), glob)
+            .ToArray();
     }
 
     private void SetFiles(string[] files) => _files = files;
@@ -102,20 +120,4 @@ public class CMenuBuilder : MonoBehaviour
     private void SetPreviousMousePosition(Vector3 pp) => _previousMousePosition = pp;
 
     private Vector3 GetPreviousMousePosition() => _previousMousePosition;
-
-    /// <summary>
-    /// Enumerate all corresponding files in the watched directory.
-    /// </summary>
-    /// <returns>
-    /// The list of fully-qualified paths.
-    /// </returns>
-    private static string[] EnumerateFiles()
-    {
-        var ext = Ext.StartsWith(".") ? Ext : $".{Ext}";
-        var glob = $"*{ext}";
-
-        return Directory
-            .EnumerateFiles(Path.Combine(Directory.GetCurrentDirectory(), Dir), glob)
-            .ToArray();
-    }
 }

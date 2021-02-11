@@ -6,16 +6,29 @@ public class CMoleculeRepresentation
 {
     // The initial position of the molecule is little strange.
     // To see the molecule well, we have to move it a little.
-    private const float YBias = 50F;
+    private const float XBias = 100F;
+    private const float YBias = 100F;
     private const float ZBias = -100F;
 
-    private readonly string _file;
+    private readonly CMolecula _molecule;
 
-    private CMolecula _molecule;
-
-    public CMoleculeRepresentation(string file)
+    /// <summary>
+    /// Create a new molecule representation using the contents of a .pdb file.
+    /// </summary>
+    /// <param name="file">
+    /// The .pdb file, that the molecule is parsed from.
+    /// </param>
+    public static CMoleculeRepresentation ParseFromFile(string file)
     {
-        _file = file;
+        var name = Path.GetFileNameWithoutExtension(file);
+        var atoms = CAtom.ParseFromFile(file);
+
+        return new CMoleculeRepresentation(atoms, name);
+    }
+
+    private CMoleculeRepresentation(CAtom[] atoms, string name)
+    {
+        _molecule = new CMolecula(atoms, name);
     }
 
     /// <summary>
@@ -26,15 +39,10 @@ public class CMoleculeRepresentation
     /// </param>
     public void Display(float baseScale)
     {
-        var atoms = CAtom.ParseFromFile(GetFile());
-        var name = Path.GetFileNameWithoutExtension(GetFile());
-        var molecule = new CMolecula(atoms, name);
+        // The order of calling is important!
+        GetMolecule().Display();
 
-        SetMolecule(molecule);
-
-        molecule.Display(); // Order is important!
-
-        Scale(baseScale);
+        Scale(new Vector3(baseScale, baseScale, baseScale));
         Centralize();
     }
 
@@ -58,7 +66,7 @@ public class CMoleculeRepresentation
 
         var ret = handler.transform.localScale + new Vector3(delta, delta, delta);
 
-        if (ret.x > 0 && ret.y > 0 && ret.z > 0) handler.transform.localScale = ret;
+        if (ret.x > 0 && ret.y > 0 && ret.z > 0) Scale(ret);
     }
 
     /// <summary>
@@ -112,9 +120,15 @@ public class CMoleculeRepresentation
         }
     }
 
-    private void Scale(float s)
+    /// <summary>
+    /// Update the scale rate of the handler.
+    /// </summary>
+    /// <param name="s">
+    /// The new scale rate.
+    /// </param>
+    private void Scale(Vector3 s)
     {
-        GetMolecule().Handle.transform.localScale = new Vector3(s, s, s);
+        GetMolecule().Handle.transform.localScale = s;
     }
 
     private void Centralize()
@@ -124,12 +138,8 @@ public class CMoleculeRepresentation
         var handler = GetMolecule().Handle;
         var wp = Camera.main.WorldToScreenPoint(handler.transform.position);
 
-        handler.transform.position = new Vector3(wp.x, wp.y + YBias, +ZBias);
+        handler.transform.position = new Vector3(wp.x + XBias, wp.y + YBias, ZBias);
     }
-
-    private string GetFile() => _file;
-
-    private void SetMolecule(CMolecula molecule) => _molecule = molecule;
 
     private CMolecula GetMolecule() => _molecule;
 }
