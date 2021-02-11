@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Globalization;
-using System.IO;
-using System.Linq;
 using UnityEngine;
-using Object = UnityEngine.Object;
 
 namespace AminoAcids
 {
@@ -29,8 +26,6 @@ namespace AminoAcids
         public float temp; // 61-66 temperature factor
         public string symbol; // 77-78 symbol
         public string charge; // 79-80 charge of the atom
-
-        public GameObject Sphere { get; private set; }
 
         /// <summary>
         /// A stunted factory method for atom models.
@@ -63,44 +58,8 @@ namespace AminoAcids
             };
         }
 
-        /// <summary>
-        /// Build atoms by use of the file contents.
-        /// </summary>
-        /// <param name="path">
-        /// The path of the file which contents are used to build atom models.
-        /// </param>
-        /// <returns>
-        /// The list of parsed atoms.
-        /// </returns>
-        public static CAtom[] ParseFromFile(string path)
+        private CAtom()
         {
-            return (
-                from line in File.ReadLines(path)
-                where line.StartsWith("ATOM")
-                select ParseFromString(line)
-            ).ToArray();
-        }
-
-        /// <summary>
-        /// Build the graphical representation and place it on the screen.
-        /// </summary>
-        public void Display()
-        {
-            Sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-
-            Sphere.name = atomname;
-            Sphere.GetComponent<Renderer>().material.color = GetColor();
-            Sphere.GetComponent<Renderer>().material.shader = Shader.Find("Standard");
-            Sphere.transform.localScale = new Vector3(GetRadius(), GetRadius(), GetRadius());
-            Sphere.transform.position = new Vector3(-x, y, z);
-        }
-
-        /// <summary>
-        /// Destroy the graphical representation.
-        /// </summary>
-        public void DestroySphere()
-        {
-            Object.Destroy(Sphere);
         }
 
         /// <summary>
@@ -112,25 +71,15 @@ namespace AminoAcids
         /// </returns>
         public Color GetColor()
         {
-            var color = Color.Lerp(Color.green, Color.green, K);
-
             switch (symbol.Trim())
             {
-                case "O":
-                    color = Color.Lerp(Color.red, Color.gray, K);
-                    break;
-                case "N":
-                    color = Color.Lerp(Color.blue, Color.gray, K);
-                    break;
-                case "C":
-                    color = Color.Lerp(Color.black, Color.gray, K);
-                    break;
-                case "H":
-                    color = Color.Lerp(Color.white, Color.gray, K);
-                    break;
+                case "O": return Color.Lerp(Color.red, Color.gray, K);
+                case "N": return Color.Lerp(Color.blue, Color.gray, K);
+                case "C": return Color.Lerp(Color.black, Color.gray, K);
+                case "H": return Color.Lerp(Color.white, Color.gray, K);
             }
 
-            return color;
+            return Color.Lerp(Color.green, Color.green, K);
         }
 
         /// <summary>
@@ -142,25 +91,15 @@ namespace AminoAcids
         /// </returns>
         public float GetRadius()
         {
-            var radius = 0.1F;
-
             switch (symbol.Trim())
             {
-                case "O":
-                    radius = 0.6F;
-                    break;
-                case "N":
-                    radius = 0.71F;
-                    break;
-                case "C":
-                    radius = 0.76F;
-                    break;
-                case "H":
-                    radius = 0.46F;
-                    break;
+                case "O": return 0.6F;
+                case "N": return 0.71F;
+                case "C": return 0.76F;
+                case "H": return 0.46F;
             }
 
-            return radius;
+            return 0.1F;
         }
 
         public override string ToString() => $"{stringname} ({x}, {y}, {z})"; // TODO: build the entire representation.

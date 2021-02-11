@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System.Linq;
 using AminoAcids;
 using UnityEngine;
 
@@ -10,7 +11,10 @@ public class CMoleculeRepresentation
     private const float YBias = 100F;
     private const float ZBias = -100F;
 
-    private readonly CMolecula _molecule;
+    private CMolecula Molecule { get; }
+
+    private GameObject Handler { get; set; } // The wrapper for atoms
+    private CAtomRepresentation[] AtomRepresentations { get; set; } // The spheres
 
     /// <summary>
     /// Create a new molecule representation using the contents of a .pdb file.
@@ -21,14 +25,20 @@ public class CMoleculeRepresentation
     public static CMoleculeRepresentation ParseFromFile(string file)
     {
         var name = Path.GetFileNameWithoutExtension(file);
-        var atoms = CAtom.ParseFromFile(file);
+        var atoms = (
+            from line in File.ReadLines(file)
+            where line.StartsWith("ATOM")
+            select CAtom.ParseFromString(line)
+        ).ToArray();
 
-        return new CMoleculeRepresentation(atoms, name);
+        return new CMoleculeRepresentation(new CMolecula(atoms, name));
     }
 
-    private CMoleculeRepresentation(CAtom[] atoms, string name)
+    private CMoleculeRepresentation(CMolecula molecule)
     {
-        _molecule = new CMolecula(atoms, name);
+        Molecule = molecule;
+
+        AtomRepresentations = new CAtomRepresentation[Molecule.Atoms.Length];
     }
 
     /// <summary>
@@ -39,8 +49,16 @@ public class CMoleculeRepresentation
     /// </param>
     public void Display(float baseScale)
     {
-        // The order of calling is important!
-        GetMolecule().Display();
+        Handler = new GameObject {name = Molecule.Name};
+
+        for (var i = 0; i < Molecule.Atoms.Length; i++)
+        {
+            var ar = new CAtomRepresentation(Molecule.Atoms[i]);
+
+            AtomRepresentations[i] = ar;
+            ar.SetParent(Handler);
+            ar.Display();
+        }
 
         Scale(new Vector3(baseScale, baseScale, baseScale));
         Centralize();
@@ -51,7 +69,9 @@ public class CMoleculeRepresentation
     /// </summary>
     public void Destroy()
     {
-        Object.Destroy(GetMolecule().Handle);
+        foreach (var ar in AtomRepresentations) ar.Destroy();
+
+        Object.Destroy(Handler);
     }
 
     /// <summary>
@@ -62,9 +82,7 @@ public class CMoleculeRepresentation
     /// </param>
     public void ScaleWithWheel(float delta)
     {
-        var handler = GetMolecule().Handle;
-
-        var ret = handler.transform.localScale + new Vector3(delta, delta, delta);
+        var ret = Handler.transform.localScale + new Vector3(delta, delta, delta);
 
         if (ret.x > 0 && ret.y > 0 && ret.z > 0) Scale(ret);
     }
@@ -87,7 +105,7 @@ public class CMoleculeRepresentation
 
         if (diff.x == 0 && diff.y == 0) return;
 
-        GetMolecule().Handle.transform.Rotate(new Vector3(diff.y, diff.x, 0));
+        Handler.transform.Rotate(new Vector3(diff.y, diff.x, 0));
     }
 
     /// <summary>
@@ -101,21 +119,19 @@ public class CMoleculeRepresentation
     /// </param>
     public void MoveWithArrows(KeyCode keyCode, float velocity)
     {
-        var handler = GetMolecule().Handle;
-
         switch (keyCode)
         {
             case KeyCode.UpArrow:
-                handler.transform.position += Vector3.down * velocity;
+                Handler.transform.position += Vector3.down * velocity;
                 break;
             case KeyCode.RightArrow:
-                handler.transform.position += Vector3.left * velocity;
+                Handler.transform.position += Vector3.left * velocity;
                 break;
             case KeyCode.DownArrow:
-                handler.transform.position += Vector3.up * velocity;
+                Handler.transform.position += Vector3.up * velocity;
                 break;
             case KeyCode.LeftArrow:
-                handler.transform.position += Vector3.right * velocity;
+                Handler.transform.position += Vector3.right * velocity;
                 break;
         }
     }
@@ -128,18 +144,15 @@ public class CMoleculeRepresentation
     /// </param>
     private void Scale(Vector3 s)
     {
-        GetMolecule().Handle.transform.localScale = s;
+        Handler.transform.localScale = s;
     }
 
     private void Centralize()
     {
         if (Camera.main is null) return;
 
-        var handler = GetMolecule().Handle;
-        var wp = Camera.main.WorldToScreenPoint(handler.transform.position);
+        var wp = Camera.main.WorldToScreenPoint(Handler.transform.position);
 
-        handler.transform.position = new Vector3(wp.x + XBias, wp.y + YBias, ZBias);
+        Handler.transform.position = new Vector3(wp.x + XBias, wp.y + YBias, ZBias);
     }
-
-    private CMolecula GetMolecule() => _molecule;
 }
