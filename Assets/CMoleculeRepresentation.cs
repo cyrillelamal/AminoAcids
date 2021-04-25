@@ -136,6 +136,11 @@ public class CMoleculeRepresentation
         }
     }
 
+    public void Rotate(Quaternion rot)
+    {
+        
+    }
+
     /// <summary>
     /// Update the scale rate of the handler.
     /// </summary>

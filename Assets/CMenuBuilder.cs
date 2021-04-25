@@ -70,23 +70,25 @@ public class CMenuBuilder : MonoBehaviour
     private void Update()
     {
         var handler = GetHandler();
-        if (handler is null) return; // The user has not yet chosen a molecule.
+        if (handler is null) return; // The user didn't choose any molecule.
 
-        // Scale
-        if (Input.mouseScrollDelta.y != 0) handler.ScaleWithWheel(Input.mouseScrollDelta.y);
-
-        // Rotations
-        var cp = Input.mousePosition;
-        var pp = GetPreviousMousePosition();
-        if (Input.GetMouseButton(0)) handler.RotateWithMouse(cp, pp, Velocity);
-
-        // Movements
-        if (Input.GetKey(KeyCode.UpArrow)) handler.MoveWithArrows(KeyCode.UpArrow, Velocity);
-        if (Input.GetKey(KeyCode.RightArrow)) handler.MoveWithArrows(KeyCode.RightArrow, Velocity);
-        if (Input.GetKey(KeyCode.DownArrow)) handler.MoveWithArrows(KeyCode.DownArrow, Velocity);
-        if (Input.GetKey(KeyCode.LeftArrow)) handler.MoveWithArrows(KeyCode.LeftArrow, Velocity);
-
-        SetPreviousMousePosition(cp); // Unconditional
+        GyroModifyCamera();
+        // TODO: VR handlers
+        // // Scale
+        // if (Input.mouseScrollDelta.y != 0) handler.ScaleWithWheel(Input.mouseScrollDelta.y);
+        //
+        // // Rotations
+        // var cp = Input.mousePosition;
+        // var pp = GetPreviousMousePosition();
+        // if (Input.GetMouseButton(0)) handler.RotateWithMouse(cp, pp, Velocity);
+        //
+        // // Movements
+        // if (Input.GetKey(KeyCode.UpArrow)) handler.MoveWithArrows(KeyCode.UpArrow, Velocity);
+        // if (Input.GetKey(KeyCode.RightArrow)) handler.MoveWithArrows(KeyCode.RightArrow, Velocity);
+        // if (Input.GetKey(KeyCode.DownArrow)) handler.MoveWithArrows(KeyCode.DownArrow, Velocity);
+        // if (Input.GetKey(KeyCode.LeftArrow)) handler.MoveWithArrows(KeyCode.LeftArrow, Velocity);
+        //
+        // SetPreviousMousePosition(cp); // Unconditional
     }
 
     /// <summary>
@@ -103,6 +105,16 @@ public class CMenuBuilder : MonoBehaviour
         return Directory
             .EnumerateFiles(Path.Combine(Directory.GetCurrentDirectory(), Dir), glob)
             .ToArray();
+    }
+    
+    void GyroModifyCamera(CMoleculeRepresentation handler)
+    {
+        handler.transform.rotation = GyroToUnity(Input.gyro.attitude);
+    }
+
+    private static Quaternion GyroToUnity(Quaternion q)
+    {
+        return new Quaternion(q.x, q.y, -q.z, -q.w);
     }
 
     private void SetFiles(string[] files) => _files = files;
